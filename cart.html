@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bakery Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #c8dce4;
+        }
+
+        a.active {
+            color: black;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #65a6ac;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover {
+            color: black !important;
+        }
+
+        .cart-icon i {
+            color: #6c757d;
+            transition: color 0.2s ease;
+            cursor: pointer;
+            margin-right: 15px;
+            border: 1px solid #6c757d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cart-icon i:hover {
+            background-color: #6c757d;
+            color: #ffffff;
+        }
+
+        .navbar-brand {
+            margin-left: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b0bcbc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .btn-buy-now {
+            margin-top: 20px;
+        }
+
+        .cake-card {
+            text-align: center;
+            background-color: #b0bcbc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cake-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .cake-card h5 {
+            margin-top: 5px;
+        }
+
+        .cake-card p,
+        .cake-card button {
+            margin: 0;
+        }
+
+        .cake-card button {
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: white;
+            font-family: "Nunito Sans", sans-serif;
+            text-shadow: 2px 2px 2px gray;
+            font-weight: 700;
+        }
+
+        h1 span {
+            font-size: 60px;
+            color: #65a5ac;
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 800;
+        }
+
+        .footer-icon {
+            color: white;
+            transition: color 0.2s ease;
+        }
+
+        .f_span {
+            color: #65a6ac;
+        }
+
+        .footer-icon:hover {
+            color: black;
+        }
+
+        .main-content {
+            background-color: #c8dce4;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="bakery.jpg" alt="Bakery Logo" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Cake.html">Cakes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cheesecake.html">Cheesecake</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="NewArrivals.html">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="#" class="cart-icon ms-3" id="cart-toggle"><i class="fas fa-shopping-cart"></i></a>
+                <button class="btn btn-outline-success" type="submit" id="authButton">Log in</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 text-center">
+        <h1>YOUR <span>CART</span></h1>
+        <div id="cart-items"></div>
+        <div id="empty-message" style="display: none;">
+            <p>Your cart is empty.</p>
+        </div>
+        <button class="btn btn-outline-secondary mt-3" id="buy-now">Buy Now</button>
+    </div>
+
+    <footer class="bg-dark text-center text-white py-4" style="margin-top: 370px;">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Created By <span class="f_span">Harshdeep</span> | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const authButton = document.getElementById('authButton');
+        const buyNowButton = document.getElementById('buy-now');
+
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (isLoggedIn) {
+            authButton.textContent = 'Log out';
+            authButton.classList.remove('btn-outline-success');
+            authButton.classList.add('btn-outline-danger');
+            authButton.addEventListener('click', function () {
+                localStorage.removeItem('isLoggedIn');  
+                alert('Logged out!');
+                window.location.href = 'login.html'; 
+            });
+        } else {
+            authButton.textContent = 'Log in';
+            authButton.classList.remove('btn-outline-danger');
+            authButton.classList.add('btn-outline-success');
+            authButton.addEventListener('click', function () {
+                window.location.href = 'login.html';  
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginState = localStorage.getItem('isLoggedIn');
+            const navbarLoginButton = document.getElementById('navbarLoginButton');
+
+            if (loginState === 'true') {
+                navbarLoginButton.textContent = 'Log out';
+                navbarLoginButton.onclick = function () {
+                    localStorage.setItem('isLoggedIn', 'false'); 
+                    location.reload();
+                };
+            } else {
+                navbarLoginButton.textContent = 'Log in';
+                navbarLoginButton.onclick = function () {
+                    window.location.href = 'login.html';
+                };
+            }
+        });
+        buyNowButton.addEventListener('click', function () {
+            window.location.href = 'Form.html'; 
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

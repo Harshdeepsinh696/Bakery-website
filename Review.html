@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bakery Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a.active {
+            color: black !important;
+        }
+
+        body {
+            padding-top: 70px;
+            background-color: #c8dce4;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #65a6ac;
+        }
+
+        .nav-link {
+            color: white !important;
+            transition: color 0.2s ease;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .nav-link:hover {
+            color: rgb(85, 85, 85) !important;
+        }
+
+        .cart-icon i {
+            color: #6c757d;
+            transition: color 0.2s ease;
+            cursor: pointer;
+            margin-right: 15px;
+            border: 1px solid #6c757d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .cart-icon i:hover {
+            background-color: #6c757d;
+            color: #ffffff;
+        }
+
+
+        .navbar-brand {
+            margin-left: 20px;
+        }
+
+        .cake-card {
+            text-align: center;
+            background-color: #b0bcbc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            align-items: center;
+        }
+
+        .cake-card h5 {
+            margin-top: 5px;
+        }
+
+        .cake-card p,
+        .cake-card button {
+            margin: 0;
+        }
+
+
+        .icon-container {
+            top: 10px;
+            left: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .icon-container i {
+            color: white;
+            transition: color 0.1s;
+            cursor: pointer;
+        }
+
+
+
+        .fa-shopping-cart {
+            color: rgb(61, 104, 119);
+        }
+
+        .star,
+        .fa-quote-left {
+            color: #2e6167;
+        }
+
+        .imgs {
+            border-radius: 50%;
+            margin-top: auto;
+            height: 70px;
+            width: 70px;
+        }
+
+
+        h1 {
+            font-size: 60px;
+            color: white;
+            font-family: "Nunito Sans", sans-serif;
+            text-shadow: 2px 2px 2px gray;
+            font-weight: 700;
+        }
+
+        h1 span {
+            font-size: 60px;
+            color: #65a5ac;
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 800;
+        }
+
+        .f_span {
+            color: #65a6ac;
+        }
+
+        .footer-icon {
+            color: white;
+            transition: color 0.2s ease;
+        }
+
+        .footer-icon:hover {
+            color: black;
+        }
+
+        .main-content {
+            background-color: #c8dce4;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="bakery.jpg" alt="Bakery Logo" width="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cake.html">Cakes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cheesecake.html">Cheesecake</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="NewArrivals.html">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="#" class="cart-icon ms-3" id="cart-toggle"><i class="fas fa-shopping-cart"></i></a>
+                <button class="btn btn-outline-success" type="submit" id="authButton">Log in</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="container my-5">
+            <h1 class="text-center my-4">CUSTOMER'S <span>REVIEWS</span></h1>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">This bakery has a lovely, cozy atmosphere, and the treats are
+                            fantastic. I love coming here for my morning coffee and a croissant. It’s the perfect way to
+                            start the day, and the staff always makes me feel welcome.</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">Michael S.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">Not only are the baked goods out of this world, but the staff
+                            here is also super friendly and helpful. They went above and beyond to make sure I had
+                            exactly what I needed. It’s always a pleasure to stop by!</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">James L.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">I’ve tried many bakeries, but this one stands out. The bread is
+                            perfectly baked, and the cookies are simply divine. Every item I've tried has been
+                            delightful, and I can’t wait to come back for more. It’s my go-to spot now!</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">Emily R.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">The presentation of everything here is stunning! I ordered a
+                            cake for a special occasion, and it looked and tasted perfect. The attention to detail is
+                            amazing. Everyone loved it!</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">Lisa K.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">Every single item I've bought from this bakery has been fresh
+                            and bursting with flavor. From the bread to the muffins, everything tastes homemade and
+                            delicious. It’s hard to leave without buying one of everything!</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">David M.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="cake-card">
+                        <i class='fas fa-quote-left' style='font-size:36px'></i>
+                        <p class="card-text text-center">This bakery has a lovely, cozy atmosphere, and the treats are
+                            fantastic. I love coming here for my morning coffee and a croissant. It’s the perfect way to
+                            start the day, and the staff always makes me feel welcome.</p>
+                        <img src="images.png" class="mt-4 imgs d-block mx-auto" alt="...">
+                        <div class="card-title text-center mt-3">Michael S.</div>
+                        <div class="row">
+                            <div class="col text-center mt-2">
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star star"></i>
+                                <i class="fa fa-star-half-stroke star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="bg-dark text-center text-white py-4">
+        <div class="container">
+            <div class="mb-3">
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer-icon mx-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Created By <span class="f_span">Harshdeep</span> | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        const authButton = document.getElementById('authButton');
+
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+        if (isLoggedIn) {
+            authButton.textContent = 'Log out';
+            authButton.classList.remove('btn-outline-success');
+            authButton.classList.add('btn-outline-danger');
+            authButton.addEventListener('click', function () {
+                localStorage.removeItem('isLoggedIn');
+                alert('Logged out!');
+                window.location.href = 'login.html';
+            });
+        } else {
+            authButton.textContent = 'Log in';
+            authButton.classList.remove('btn-outline-danger');
+            authButton.classList.add('btn-outline-success');
+            authButton.addEventListener('click', function () {
+                window.location.href = 'login.html';
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginState = localStorage.getItem('isLoggedIn');
+            const navbarLoginButton = document.getElementById('navbarLoginButton');
+
+            if (loginState === 'true') {
+                navbarLoginButton.textContent = 'Log out';
+                navbarLoginButton.onclick = function () {
+                    localStorage.setItem('isLoggedIn', 'false');
+                    location.reload();
+                };
+            } else {
+                navbarLoginButton.textContent = 'Log in';
+                navbarLoginButton.onclick = function () {
+                    window.location.href = 'login.html';
+                };
+            }
+        });
+    </script>
+
+</body>
+
+</html>
